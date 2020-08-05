@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    class OrderItem
+    public class OrderItem
     {
 
         public OrderItem()
@@ -24,6 +24,7 @@ namespace ACM.BL
         public decimal? PurchasePrice { get; set; }
         public int Quantity { get; set; }
 
+        
         ///<summary>
         ///retrieve one costumer
         ///</summary>

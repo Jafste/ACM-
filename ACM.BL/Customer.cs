@@ -50,12 +50,13 @@ namespace ACM.BL
 
         public static int InstanceCount { get; set; }
 
-      
+        public override string ToString() => FullName;
+
         ///<summary>
         ///validates the customer data
         ///</summary>
         ///<returns></returns>
-        public bool Validate()
+        public override bool Validate()
         {
             var isValid = true;
             if (string.IsNullOrWhiteSpace(LastName)) isValid = false;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    class Order
+    public class Order
     {
         public Order() : this(0)
         {
@@ -25,41 +25,7 @@ namespace ACM.BL
         public List<OrderItem> OrderItems { get; set; }
         public int ShippingAddressId { get; set; }
 
-        /// <summary>
-        /// retrieve one Order
-        /// </summary>
-        ///
-        public Order Retrieve(int OrderId)
-        {
-            //implement code
-
-            return new Order();
-        }
-
-        /// <summary>
-        /// retrieve all Order
-        /// </summary>
-        ///
-        public List<Order> Retrieve()
-        {
-            //implement code
-
-            return new List<Order>();
-        }
-
-
-        ///<summary>
-        ///save Order
-        ///</summary>
-        ///
-        public bool Save()
-        {
-            //implement code
-
-            return true;
-        }
-
-
+        public override string ToString() => $"{OrderDate.Value.Date} ({OrderId})";
         ///<summary>
         ///validates the Order data
         ///</summary>

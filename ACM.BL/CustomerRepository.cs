@@ -48,7 +48,6 @@ namespace ACM.BL
         public bool Save(Customer customer)
         {
             //implement code
-
             return true;
         }
 

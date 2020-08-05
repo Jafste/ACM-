@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    class Product
+    public class Product : EntityBase
     {
         public Product()
         {
@@ -22,43 +22,9 @@ namespace ACM.BL
         public string ProductName { get; set; }
         public int ProductId{ get; private set; }
         public string ProductDescription { get; set; }
-        public decimal? CurrentPrice { get; set; } 
+        public decimal? CurrentPrice { get; set; }
 
-        ///<summary>
-        ///retrieve one product
-        ///</summary>
-        ///
-        public Product Retrieve(int productId)
-        {
-            //implement code
-
-            return new Product();
-        }
-
-        ///<summary>
-        ///retrieve all products
-        ///</summary>
-        ///
-        public List<Product> Retrieve()
-        {
-            //implement code
-
-            return new List<Product>();
-        }
-
-
-        ///<summary>
-        ///save product
-        ///</summary>
-        ///
-        public bool Save()
-        {
-            //implement code
-
-            return true;
-        }
-
-
+        public override string ToString() => ProductName;
         ///<summary>
         ///validates the product data
         ///</summary>
