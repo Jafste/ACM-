@@ -21,9 +21,6 @@ namespace ACM.BL
 
         public EntityStateOption EntityState { get; set; }
 
-        public bool Validate()
-        {
-
-        }
+        public abstract bool Validate();
     }
 }

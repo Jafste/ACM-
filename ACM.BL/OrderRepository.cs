@@ -28,14 +28,31 @@ namespace ACM.BL
             }
             return order;
         }
+
         ///<summary>
         ///Saves the current ORder
         /// </summary>
-        /// 
         public bool Save(Order order)
         {
-            //code that saves the passed in order
-            return true;
+            var success = true;
+
+            if (order.HasChanges)
+            {
+                if (order.IsValid)
+                {
+                    if (order.IsNew)
+                    {
+                        //Call an Insert Stored Procedure
+                    }
+                    else
+                    {
+                        //Call an Insert Stored Procedure
+                    }
+                }
+                else
+                    success = false;
+            }
+            return success;
         }
     }
 }
